@@ -43,8 +43,11 @@ const ModelViewer = () => {
 
     // Controls
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+   controls.enableZoom = true; // Enable zooming
+    controls.minDistance = 2;   // Set minimum zoom distance
+    controls.maxDistance = 2;  // Set maximum zoom distance
 
     // Model loader
     const loader = new GLTFLoader();
